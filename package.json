@@ -1,0 +1,34 @@
+{
+  "name": "simple-ppob",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --delay 500ms --exec babel-node src/app.js",
+    "build": "rimraf dist && mkdir -p dist && babel src -s -D -d dist"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/node": "^7.25.0",
+    "@babel/preset-env": "^7.25.4",
+    "bcrypt": "^5.1.1",
+    "cls-hooked": "^4.2.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-jwt": "^8.4.1",
+    "fs": "^0.0.1-security",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.4",
+    "pg": "^8.12.0",
+    "request_trimmer": "^1.0.0",
+    "rimraf": "^6.0.1",
+    "sequelize": "^6.37.3",
+    "winston": "^3.14.2",
+    "winston-daily-rotate-file": "^5.0.0"
+  }
+}
