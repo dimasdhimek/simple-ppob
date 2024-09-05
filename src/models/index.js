@@ -9,7 +9,7 @@ const db = new Sequelize(process.env.DB_URL,
     define: {
       underscoredAll: true,
     },
-    dialectOptions: { decimalNumbers: true }
+    logging: process.env.NODE_ENV != 'production' ? true : false,
   });
 
 module.exports = {
