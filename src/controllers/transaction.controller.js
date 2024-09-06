@@ -76,7 +76,7 @@ const TransactionController = {
             (
               select lpad((coalesce(count(*), 0) + 1)::text, 4, '0')
               from transactions
-              where user_id = :user_id and created_at >= now()::date + interval '1h'
+              where created_at >= now()::date + interval '1h'
             )
           ),
           'TOPUP',
@@ -149,7 +149,7 @@ const TransactionController = {
             (
               select lpad((coalesce(count(*), 0) + 1)::text, 4, '0')
               from transactions
-              where user_id = :user_id and created_at >= now()::date + interval '1h'
+              where created_at >= now()::date + interval '1h'
             )
           ),
           'PAYMENT',
